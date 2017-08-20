@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+#check perms
+if [[ $EUID != 0 ]];
+then
+  echo "This script requires root privileges"
+  sleep 2
+  exit
+fi
+
 read -r domain
 
 apt-get update
