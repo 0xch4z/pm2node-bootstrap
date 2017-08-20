@@ -11,7 +11,6 @@ fi
 read -r domain
 
 apt-get update
-apt-get install
 
 #install node
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
