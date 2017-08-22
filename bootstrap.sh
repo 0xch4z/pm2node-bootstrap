@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+read -r domain
+
 #check perms
 if [[ $EUID != 0 ]];
 then
@@ -7,8 +9,6 @@ then
   sleep 2
   exit
 fi
-
-read -r domain
 
 apt-get update
 
